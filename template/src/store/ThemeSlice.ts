@@ -1,11 +1,9 @@
-import {createSlice, PayloadAction} from '@reduxjs/toolkit';
+import {createSlice} from '@reduxjs/toolkit';
 import {useColorScheme} from 'react-native';
+import {Theme} from '../types'
 
-export interface ThemeState {
-  isDarkMode: boolean;
-}
 
-const initialState: ThemeState = {
+const initialState: Theme = {
   isDarkMode: useColorScheme() === 'dark',
 };
 
@@ -13,7 +11,7 @@ const ThemeSlice = createSlice({
   name: 'theme',
   initialState,
   reducers: {
-    changeTheme: (state: ThemeState) => {
+    changeTheme: (state: Theme) => {
       state.isDarkMode = !state.isDarkMode;
     },
   },
