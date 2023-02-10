@@ -52,6 +52,7 @@ function App(): JSX.Element {
             borderTopWidth: 0,
             elevation: 0,
             shadowOpacity: 0,
+            paddingBottom: 5,
           },
         })}>
         <Tab.Screen
